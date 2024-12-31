@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.skrollr.skrollr-mobile {
+    overflow-y: auto !important;
+}
 body {
     background-color: #0a0a0a;
     font-family: "Inter Tight", serif;
