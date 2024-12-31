@@ -21,6 +21,9 @@ li {
 img {
     max-width: 100%;
 }
+.main-sec {
+    overflow-x: hidden;
+}
 .mt-10 {
     margin-top: 10px;
 }
@@ -62,6 +65,9 @@ img {
     box-shadow: none;
     outline: 0;
     transition: all 0.3s;
+}
+.btn.btn-primary:hover {
+    background-color: rgb(222, 223, 227);
 }
 .btn.btn-primary.black-btn {
     background-color: #262626;
@@ -145,6 +151,11 @@ header {
     padding: 6px 15px;
     font-size: 16px;
     color: #cccccc;
+    border-radius: 200px;
+    transition: all 0.5s;
+}
+.h-menu .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.06);
 }
 .h-menu .navbar-nav .nav-link.dropdow {
     display: flex;
@@ -247,35 +258,48 @@ header {
 .features-tab {
     margin: 50px auto 0px;
     width: 70%;
-    margin: auto;
     padding: 1px;
-    border: 1px solid #3E3E41;
     border-radius: 20px;
+    overflow: hidden;
 }
-/*.features-tab::before {
+.features-tab::before {
     content: "";
     height: 100%;
     width: 100%;
-    background: radial-gradient(23.5% 23.5% at 8.36% 0.26%, rgba(255, 255, 255, 0.604) 0%, rgba(0, 0, 0, 0) 100%);
+    background-color: #3E3E41;
+    border-radius: 20px;
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
-    border-radius: 20px;
-    -webkit-animation: rotate-gradient 3s infinite linear;
-    animation: rotate-gradient 3s infinite linear;
+    bottom: 0px;
+    z-index: -1;
 }
-@keyframes rotate-gradient {
+.features-tab > span {
+    /* background: radial-gradient(23.5% 23.5% at 0.248% 96%, rgba(255, 255, 255, 0.792) 0%, #3e3e41 100%); */
+    background: radial-gradient(rgba(255, 255, 255, 0.60) 5%, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
+    animation: move 9s linear infinite;
+    offset-path: rect(0% auto 100% auto);
+    padding: 1px;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+.features-tab > img {
+    border-radius: 20px;
+}
+@keyframes move {
     0% {
-        --angle: 0deg;
+        offset-distance: 0%;
     }
 
     100% {
-        --angle: 360deg;
+        offset-distance: 100%;
     }
-}*/
-.features-tab > img {
-    border-radius: 20px;
 }
 .f-tab .nav-tabs .nav-link {
     display: flex;
@@ -335,6 +359,10 @@ header {
 }
 .features-main .features-right {
     width: 40%;
+}
+.features-right .img-top {
+    margin-top: 81px;
+    max-width: 360px;
 }
 .features-left > p {
     font-size: 18px;
@@ -407,6 +435,15 @@ header {
     background-color: #7040ff;
 }
 
+.responsive-partner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.responsive-partner .partner-logo {
+    width: calc(33.33% - 11px);
+}
+
 
 .multiple-application .multi-app {
     max-width: 960px;
@@ -414,6 +451,9 @@ header {
 }
 
 
+.our-solution {
+    overflow: hidden;
+}
 .roadmap {
     max-width: 860px;
     margin: 0px auto;
@@ -424,12 +464,16 @@ header {
     border-radius: 9px;
     flex: none;
     height: 100%;
-    width: 4px;
+    width: 3px;
     position: absolute;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+}
+.roadmap-line[style="transform: translateY(100%);"] {
+    transform: translateX(0px) translateY(1053.48px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px) !important;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(10, 10, 10, 0) 100%) !important;
 }
 .roadmap::before {
     content: "";
@@ -442,7 +486,7 @@ header {
     position: absolute;
     top: 0px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     z-index: 1;
 }
 .roadmap > .roadmap-item {
@@ -526,6 +570,7 @@ header {
 }
 .personalization-intro .pi-box {
     display: flex;
+    flex-wrap: wrap;
     gap: 56px;
 }
 .pi-box .pi-list > h3 {

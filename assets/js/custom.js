@@ -77,3 +77,47 @@ $(window).scroll(function(){
 // })
 
 // observer.observe(document.getElementById("movable-div"))
+
+
+$(".feature1").on("click", () => {
+  $("[data-code-genrator]").removeAttr("data-aos")
+  $("[data-code-genrator-img]").removeAttr("data-aos")
+  $("[data-test-environment]").removeAttr("data-aos")
+  $("[data-test-environment-img]").removeAttr("data-aos")
+  $("[data-ai-hub-img], [data-ai-hub]").removeClass("aos-animate")
+  $("[data-ai-hub]").attr("data-aos", "fade-up")
+  $("[data-ai-hub-img]").attr("data-aos", "fade-up-right")
+
+  $("[data-ai-hub-img], [data-ai-hub]").addClass("aos-init")
+  setTimeout(() => {
+    $("[data-ai-hub-img], [data-ai-hub]").addClass("aos-animate")
+  }, 100)
+})
+$(".feature2").on("click", () => {
+  $("[data-ai-hub]").removeAttr("data-aos")
+  $("[data-ai-hub-img]").removeAttr("data-aos")
+  $("[data-test-environment]").removeAttr("data-aos")
+  $("[data-test-environment-img]").removeAttr("data-aos")
+  $("[data-code-genrator-img], [data-code-genrator]").removeClass("aos-animate")
+  $("[data-code-genrator]").attr("data-aos", "fade-up")
+  $("[data-code-genrator-img]").attr("data-aos", "fade-up-right")
+
+  $("[data-code-genrator-img], [data-code-genrator]").addClass("aos-init")
+  setTimeout(() => {
+    $("[data-code-genrator-img], [data-code-genrator]").addClass("aos-animate")
+  }, 100)
+})
+$(".feature3").on("click", () => {
+  $("[data-ai-hub]").removeAttr("data-aos")
+  $("[data-ai-hub-img]").removeAttr("data-aos")
+  $("[data-code-genrator]").removeAttr("data-aos")
+  $("[data-code-genrator-img]").removeAttr("data-aos")
+  $("[data-test-environment-img], [data-test-environment]").removeClass("aos-animate")
+  $("[data-test-environment]").attr("data-aos", "fade-up")
+  $("[data-test-environment-img]").attr("data-aos", "fade-up-right")
+
+  $("[data-test-environment-img], [data-test-environment]").addClass("aos-init")
+  setTimeout(() => {
+    $("[data-test-environment-img], [data-test-environment]").addClass("aos-animate")
+  }, 100)
+})

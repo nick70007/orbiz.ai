@@ -1,135 +1,314 @@
-@media (max-width: 1399.98px) {}
-
-@media (max-width: 1199.98px) {
-    .auth-form-wrapper {
-        padding: 24px;
+@media screen and (max-width: 479px){
+    .hero-intro p {
+        max-width: 300px;
+        font-size: 14px;
     }
-
-    .auth-form {
-        margin: 50px auto;
-    }
-
-    .auth-form form {
-        margin-top: 40px;
-    }
-
-    .auth-title {
+}
+@media screen and (max-width: 575px){
+    .hero-intro h1,
+    .hero-intro h2,
+    .contact-text h2 {
         font-size: 34px;
     }
-}
-
-@media (max-width: 991.98px) {
-    .auth-logo {
-        margin: 0 auto;
+    .features-main {
+        flex-wrap: wrap;
     }
-
-    .auth-form-wrapper {
-        padding: 0px;
+    .features-main .features-left,
+    .features-main .features-right,
+    .analytics-main .analytics-item {
+        width: 100%;
     }
-
-    .auth-img {
-        margin: 0px;
-        border-radius: 16px;
+    .features-main .features-left {
+        border-right: 0px;
     }
-
-    .user-select {
-        padding: 8px;
+    .features-main .features-right {
+        border-top: 1px solid #2f2f33;
     }
-/* ==dashboard== */
-.aside {
-    width: 280px;
-    flex-basis: 280px;
-    transform: translateX(-280px);
-}
-.aside.hide {
-    transform: translateX(0px);
-}
-.navbar-brand {
-    padding: 10px;
-}
-.content-wrapper {
-    margin-left: 0;
-    padding: 0;
-}
-.content-wrapper.hide {
-    margin-left: 0;
-}
-.page-content {
-    margin: 0 8px 8px 8px;
-}
-}
-
-@media (max-width: 767.98px) {
-    .otp-box {
-        width: 50px;
-        padding: 6px;
+    .partner-logo > span {
+        height: 50px;
+    }
+    .pricing-head h2 {
+        font-size: 28px;
+    }
+    .multiple-application .multi-app {
+        gap: 14px;
+        justify-content: center !important;
+    }
+    .footer-bottom {
+        justify-content: center !important;
+        gap: 15px;
     }
 }
-
-@media (max-width: 575.98px) {
-    .auth-logo {
-        max-width: 180px;
-        margin-top: 20px;
+@media screen and (max-width: 767px) and (min-width: 575px) {
+    
+}
+@media screen and (max-width: 767px){
+    .environments,
+    .analytics-main .analytics-item,
+    .pricing-item .pricing-head,
+    .te-box,
+    .accordion-list > li,
+    .personalization-box,
+    .roadmap-item .roadmap-box,
+    .features-main .features-left {
+        padding: 20px;
     }
-
-    .auth-title {
-        font-size: 24px;
+    .d-flex {
+        flex-wrap: wrap;
     }
-
-    .auth-input {
-        padding: 12px 14px;
+    .page-paddings {
+        padding: 80px 0px;
     }
-
-    .auth-btn {
-        padding: 8px 14px;
-        margin-top: 10px;
+    .page-title > h2 {
+        font-size: 26px;
     }
-
-    .auth-form-wrapper .quick-link {
-        font-size: 16px;
+    .f-tab .nav-tabs .nav-link {
+        font-size: 0px;
+        padding-right: 0px;
     }
-
-    .auth-form {
-        margin: 30px auto;
+    .f-tab .nav-tabs .nav-link > span {
+        height: 40px;
+        width: 40px;
     }
-
-    .auth-img {
-        margin: 0px;
-        border-radius: 8px;
+    .roadmap {
+        padding: 0px 0px 0px 20px;
+        margin-bottom: 120px;
     }
-
-    .otp-inputs .div {
+    .roadmap > .roadmap-item {
+        margin-bottom: 20px;
+    }
+    .roadmap-item .roadmap-box {
+        max-width: 100%;
+    }
+    .roadmap-item.r-right > .roadmap-box {
+        margin-left: 0px;
+    }
+    .roadmap-line {
         display: none;
     }
-
-    .auth-form-group {
-        gap: 5px;
+    .roadmap::before {
+        transform: none;
+        left: 0px;
+    }
+    .roadmap-box > .r-border {
+        display: none;
+    }
+    .earth-img,
+    .leveraging-img {
+        display: none;
+    }
+    .pricing-main .pricing-item {
+        width: 100%;
+        border-right: 0px;
+    }
+    .pricing-main .pricing-item {
+        border-bottom: 1px solid #3e3e41;
+    }
+    .pricing-main .pricing-item:last-child {
+        border-bottom: 0px;
+    }
+    .pricing-main .pricing-item.pricing-bg {
+        text-align: center;
+        border-radius: 0px;
+    }
+    .te-main > .te-item {
+        transform: none !important;
+    }
+    .partner-main {
+        display: none !important;
+    }
+    .environments {
+        gap: 15px;
+    }
+    .environments-label > span {
+        padding: 8px 14px;
+    }
+    footer {
+        padding-bottom: 30px;
+    }
+    .footer-head {
+        justify-content: center !important;
+        text-align: center;
+    }
+    .footer-link {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .foat-right .form-group {
+        flex-wrap: nowrap;
     }
 
-    .user-s-img {
-        max-width: 60px;
-    }
-
-    .us-title {
-        font-size: 18px;
-    }
-
-    .us-helper {
-        font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+    .responsive-partner {
+        display: none;
     }
 }
-
-@media (max-width: 410px) {
-    .otp-inputs {
-        gap: 6px;
+@media screen and (max-width: 991px) {
+    .h-ico {
+        display: none;
     }
-
-    .otp-box {
-        width: 40px;
-        padding: 6px;
+    .main-sec {
+        padding-top: 130px;
     }
-
-    .auth-form .form {
-        margin-top: 30px;
+    header {
+        position: fixed;
+        z-index: 99;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    .header-box {
+        display: block !important;
+        position: relative;
+        border-radius: 30px;
+    }
+    .navbar.navbar-expand-lg {
+        position: static;
+        text-align: center;
+    }
+    .navbar .navbar-collapse {
+        padding-top: 20px;
+    }
+    .h-btn {
+        display: none;
+    }
+    .navbar-toggler-icon {
+        filter: invert(1);
+    }
+    .h-menu .navbar-toggler {
+        position: absolute;
+        padding: 0px;
+        border: 0px;
+        top: 16px;
+        right: 16px;
+        outline: 0 !important;
+        box-shadow: none;
+    }
+    .h-menu .navbar-nav .nav-link.dropdow {
+        justify-content: center;
+    }
+    .h-menu .navbar-nav .nav-link {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+    .h-menu .navbar-nav .nav-link:last-child {
+        margin-bottom: 0px;
+    }
+    .navbar-nav > .h-btn {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .navbar-nav > .h-btn > .btn.btn-primary {
+        padding: 14px 32px;
+        width: 260px;
+    }
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .d-flex {
+        flex-wrap: wrap;
+    }
+    .page-title > h2 {
+        font-size: 42px;
+    }
+    .hero {
+        overflow: hidden;
+    }
+    .hero-intro h1,
+    .hero-intro h2,
+    .contact-text h2 {
+        font-size: 52px;
+    }
+    .f-tab .nav-tabs .nav-link {
+        font-size: 0px;
+        padding-right: 0px;
+    }
+    .f-tab .nav-tabs .nav-link.active {
+        font-size: 18px;
+        padding-right: 15px;
+    }
+    .features-right .img-top {
+        max-width: 230px;
+        margin-top: 130px;
+    }
+    .partner-main {
+        flex-wrap: nowrap;
+    }
+    .partner-main .partner-item {
+        width: 33.33%;
+        transform: none !important;
+    }
+    .roadmap-item .roadmap-box {
+        max-width: 300px;
+        padding: 30px;
+    }
+    .roadmap-box > .r-border > svg {
+        width: 50px;
+    }
+    .roadmap-box > .r-border {
+        right: -52px;
+    }
+    .roadmap-item.r-right .roadmap-box > .r-border {
+        left: -52px;
+    }
+    .earth-img > img {
+        width: 230px;
+        height: 230px;
+    }
+    .environments {
+        gap: 15px;
+    }
+    .environments-label > span {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+    .pricing-main .pricing-item {
+        width: 50%;
+    }
+    .pricing-main .pricing-item.pricing-bg {
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+    }
+    .leveraging-img {
+        display: none;
+    }
+    .testimonial {
+        padding-bottom: 120px;
+    }
+    .testimonial .te-item {
+        transform: none !important;
+    }
+    .footer-head {
+        display: block !important;
+    }
+    .footer-head .foat-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer-head .f-logo {
+        margin: 0px;
+    }
+    .foat-right .form-group {
+        flex-wrap: nowrap;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 992px){
+    .navbar-nav > .h-btn {
+        display: none;
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .earth-img > img {
+        width: 370px;
+        height: 370px;
+    }
+    .environments-label > span {
+        padding: 8px 14px;
     }
 }
