@@ -25,7 +25,7 @@
         border-top: 1px solid #2f2f33;
     }
     .partner-logo > span {
-        height: 50px;
+        height: 60px;
     }
     .pricing-head h2 {
         font-size: 28px;
@@ -50,8 +50,13 @@
     .accordion-list > li,
     .personalization-box,
     .roadmap-item .roadmap-box,
-    .features-main .features-left {
+    .features-main .features-left,
+    .pricing-item .leveraging-text {
         padding: 20px;
+    }
+    .leveraging-img {
+        padding-left: 20px;
+        margin-top: 20px;
     }
     .d-flex {
         flex-wrap: wrap;
@@ -84,7 +89,8 @@
         margin-left: 0px;
     }
     .roadmap-line {
-        display: none;
+        transform: none;
+        left: 0px;
     }
     .roadmap::before {
         transform: none;
@@ -93,23 +99,26 @@
     .roadmap-box > .r-border {
         display: none;
     }
-    .earth-img,
-    .leveraging-img {
-        display: none;
+    .personalization-box > .earth-img {
+        position: static;
+        margin-top: 30px;
+        margin-bottom: -200px;
+    }
+    .personalization-box > .earth-img > img {
+        height: 280px;
+        width: 280px;
+    }
+    .pricing-main {
+        border: 0px;
     }
     .pricing-main .pricing-item {
+        border: 1px solid #3e3e41;
+        border-radius: 20px;
         width: 100%;
-        border-right: 0px;
-    }
-    .pricing-main .pricing-item {
-        border-bottom: 1px solid #3e3e41;
+        margin-bottom: 20px;
     }
     .pricing-main .pricing-item:last-child {
-        border-bottom: 0px;
-    }
-    .pricing-main .pricing-item.pricing-bg {
-        text-align: center;
-        border-radius: 0px;
+        margin-bottom: 0px;
     }
     .te-main > .te-item {
         transform: none !important;
@@ -205,6 +214,9 @@
     .navbar-nav > .h-btn > .btn.btn-primary {
         padding: 14px 32px;
         width: 260px;
+    }
+    .partner-logo > span > img {
+        max-height: 34px;
     }
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {

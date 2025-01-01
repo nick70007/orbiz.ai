@@ -120,4 +120,4 @@ $(".feature3").on("click", () => {
   setTimeout(() => {
     $("[data-test-environment-img], [data-test-environment]").addClass("aos-animate")
   }, 100)
-})
+});
