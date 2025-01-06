@@ -121,3 +121,74 @@ $(".feature3").on("click", () => {
     $("[data-test-environment-img], [data-test-environment]").addClass("aos-animate")
   }, 100)
 });
+
+/* AI-Enhanced Development Circle scroll animation */
+let step = 1
+let direction = 1
+var lastScrollTop = 0;
+var debounceTimer;
+
+$(window).scroll(function(e){
+  let top = $(".enhanced-main").offset().top;
+  let relativetop =$(window).scrollTop();
+  console.log(top , " Top",relativetop," relativetop");
+  if(relativetop < top){
+    return false;
+  }
+    clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(function() {
+    const currentScrollTop = $(this).scrollTop();
+
+    if (currentScrollTop > lastScrollTop) {
+      direction = 1
+      step != 3 && step++
+    } else if (currentScrollTop < lastScrollTop) {
+      direction = 0
+      step != 1 && step--
+    }
+
+    lastScrollTop = currentScrollTop;
+    console.log("step : ",step)
+    if (step == 1) {
+      console.log("step1")
+      $("[data-enhanced-t-1]").addClass("active")
+      $("[data-enhanced-t-2]").removeClass("active")
+      $("[data-enhanced-t-3]").removeClass("active")
+      $("[data-enhanced-m-1]").addClass("active")
+      $("[data-enhanced-m-2]").removeClass("active")
+      $("[data-enhanced-m-3]").removeClass("active")
+      $("[data-enhanced-d-1]").addClass("active")
+      $("[data-enhanced-d-2]").removeClass("active")
+      $("[data-enhanced-d-3]").removeClass("active")
+
+      direction == 1 ? step++ : step
+    } else if (step == 2) {
+      console.log("step2")
+      $("[data-enhanced-t-1]").removeClass("active")
+      $("[data-enhanced-t-2]").addClass("active")
+      $("[data-enhanced-t-3]").removeClass("active")
+      $("[data-enhanced-m-1]").removeClass("active")
+      $("[data-enhanced-m-2]").addClass("active")
+      $("[data-enhanced-m-3]").removeClass("active")
+      $("[data-enhanced-d-1]").removeClass("active")
+      $("[data-enhanced-d-2]").addClass("active")
+      $("[data-enhanced-d-3]").removeClass("active")
+
+      direction == 1 ? step++ : step--
+    } else {
+      console.log("step3")
+      $("[data-enhanced-t-1]").removeClass("active")
+      $("[data-enhanced-t-2]").removeClass("active")
+      $("[data-enhanced-t-3]").addClass("active")
+      $("[data-enhanced-m-1]").removeClass("active")
+      $("[data-enhanced-m-2]").removeClass("active")
+      $("[data-enhanced-m-3]").addClass("active")
+      $("[data-enhanced-d-1]").removeClass("active")
+      $("[data-enhanced-d-2]").removeClass("active")
+      $("[data-enhanced-d-3]").addClass("active")
+
+      direction == 1 ? step : step--
+    }
+  }, 150);
+
+})
