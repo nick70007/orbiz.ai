@@ -37,7 +37,6 @@ $(document).ready(function(){
 
 function isInViewport(el) {
   var rect = $('#use-cases-div')[0].getBoundingClientRect();
-  console.log(rect.top,rect.top-rect.bottom , rect.bottom - $(window).height());
   return {"isInElement" : (rect.top < 0 && rect.top > rect.top-rect.bottom) , "addPixel" : Math.abs(rect.top/5)}
 }
 
@@ -47,12 +46,10 @@ $(window).scroll(function(){
   var targetElement = $('#use-cases-div');
   let res = isInViewport(targetElement)
    if (res.isInElement) {
-    console.log("res.addPixel -> ",res.addPixel)
     if(res.addPixel > 140){
       res.addPixel = 140
     }
       sidePixel = 70 - res.addPixel;
-      console.log(sidePixel,": sidePixel");
       // if(sidePixel >= 0){
       //   sidePixel = 45 - sidePixel;
       // }
@@ -124,18 +121,35 @@ $(".feature3").on("click", () => {
 
 /* AI-Enhanced Development Circle scroll animation */
 let step = 1
+let mainDirection = 1
+let mainLastScrollTop = 0
 let direction = 1
 var lastScrollTop = 0;
 var debounceTimer;
 
 $(window).scroll(function(e){
   let top = $(".enhanced-main").offset().top;
+  let bottom = $("#ai-solution").offset().top;
   let relativetop =$(window).scrollTop();
-  console.log(top , " Top",relativetop," relativetop");
-  if(relativetop < top){
+
+
+  const currentScrollTop = $(this).scrollTop();
+  if (currentScrollTop > mainLastScrollTop) {
+    mainDirection = 1
+  } else if (currentScrollTop < mainLastScrollTop) {
+    mainDirection = 0
+  }
+  mainLastScrollTop = currentScrollTop
+
+  if(mainDirection == 1 &&( relativetop < top || relativetop > bottom)){
     return false;
   }
-    clearTimeout(debounceTimer);
+
+  if (mainDirection == 0 && relativetop > 5300) {
+    return false;
+  }
+
+  clearTimeout(debounceTimer);
   debounceTimer = setTimeout(function() {
     const currentScrollTop = $(this).scrollTop();
 

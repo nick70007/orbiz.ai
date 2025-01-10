@@ -458,6 +458,9 @@ header {
 }
 
 
+/*#ai-solution {
+    margin-top: 120px;
+}*/
 .ai-menu {
     display: flex;
     flex-wrap: wrap;
@@ -492,7 +495,7 @@ header {
     align-items: center;
     overflow: hidden;
     position: sticky;
-    top: 95px;
+    top: calc(50.00000000000002% - 746px / 2);
 }
 .enhanced-box > .e-border {
     position: absolute;
@@ -510,7 +513,7 @@ header {
     height: 300px;
 }
 .enhanced-des {
-    height: 48px;
+    height: 78px;
     overflow: hidden;
 }
 .enhanced-t > h3 {
@@ -535,6 +538,9 @@ header {
     transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
+}
+.enhanced-m {
+    transition: none;
 }
 .enhanced-t.active,
 .enhanced-m.active,
@@ -646,7 +652,11 @@ header {
     position: absolute;
     top: 15px;
     width: 396px;
+    display: none;
     animation: turn 8s linear infinite;
+}
+.enhanced-m.active .enhanced-mask {
+    display: block;
 }
 @keyframes turn{
     0% {

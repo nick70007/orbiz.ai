@@ -360,18 +360,19 @@
                   <div class="enhanced-main">
                      <div class="enhanced-box">
                         <div class="e-border">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="747" height="746" fill="none"><mask id="b" fill="#fff"><path d="M373.5 1.746a1.74 1.74 0 0 1 1.746-1.742 373 373 0 0 1 371.25 371.25 1.74 1.74 0 0 1-1.742 1.746 1.752 1.752 0 0 1-1.75-1.746 369.534 369.534 0 0 0-28.123-139.659 369.539 369.539 0 0 0-80.099-119.877A369.522 369.522 0 0 0 375.246 3.496a1.753 1.753 0 0 1-1.746-1.75z"/></mask><path stroke="url(#a)" stroke-width="14" d="M373.5 1.746a1.74 1.74 0 0 1 1.746-1.742 373 373 0 0 1 371.25 371.25 1.74 1.74 0 0 1-1.742 1.746 1.752 1.752 0 0 1-1.75-1.746 369.534 369.534 0 0 0-28.123-139.659 369.539 369.539 0 0 0-80.099-119.877A369.522 369.522 0 0 0 375.246 3.496a1.753 1.753 0 0 1-1.746-1.75z" mask="url(#b)"/><defs><linearGradient id="a" x1="373.5" x2="686.939" y1="0" y2="304.814" gradientUnits="userSpaceOnUse"><stop offset=".06" stop-color="#fff"/><stop offset="1" stop-color="#737373" stop-opacity="0"/></linearGradient></defs></svg>
+                           <!-- <svg xmlns="http://www.w3.org/2000/svg" width="747" height="746" fill="none"><mask id="b" fill="#fff"><path d="M373.5 1.746a1.74 1.74 0 0 1 1.746-1.742 373 373 0 0 1 371.25 371.25 1.74 1.74 0 0 1-1.742 1.746 1.752 1.752 0 0 1-1.75-1.746 369.534 369.534 0 0 0-28.123-139.659 369.539 369.539 0 0 0-80.099-119.877A369.522 369.522 0 0 0 375.246 3.496a1.753 1.753 0 0 1-1.746-1.75z"/></mask><path stroke="url(#a)" stroke-width="14" d="M373.5 1.746a1.74 1.74 0 0 1 1.746-1.742 373 373 0 0 1 371.25 371.25 1.74 1.74 0 0 1-1.742 1.746 1.752 1.752 0 0 1-1.75-1.746 369.534 369.534 0 0 0-28.123-139.659 369.539 369.539 0 0 0-80.099-119.877A369.522 369.522 0 0 0 375.246 3.496a1.753 1.753 0 0 1-1.746-1.75z" mask="url(#b)"/><defs><linearGradient id="a" x1="373.5" x2="686.939" y1="0" y2="304.814" gradientUnits="userSpaceOnUse"><stop offset=".06" stop-color="#fff"/><stop offset="1" stop-color="#737373" stop-opacity="0"/></linearGradient></defs></svg> -->
+                           <img src="assets/images/round-b.png">
                         </div>
                         <div class="enhanced-item text-center">
                            <div class="enhanced-text">
                               <div class="enhanced-t active" data-enhanced-t-1>
-                                 <h3>1. Efficient Project Collaboration with <br>AI-Powered Management Tools</h3>
+                                 <h3>Efficient Project Collaboration with <br>AI-Powered Management Tools</h3>
                               </div>
                               <div class="enhanced-t" data-enhanced-t-2>
-                                 <h3>2. Efficient Project Collaboration with <br>AI-Powered Management Tools</h3>
+                                 <h3>Elevate Code Quality with AI-Driven <br>Assistance and Reviews</h3>
                               </div>
                               <div class="enhanced-t" data-enhanced-t-3>
-                                 <h3>3. Efficient Project Collaboration with <br>AI-Powered Management Tools</h3>
+                                 <h3>Personalized Learning with AI-Powered <br>Knowledge Sharing</h3>
                               </div>
                            </div>
                            <div class="enhanced-media">
@@ -420,7 +421,7 @@
                                  <p>Discover a wealth of knowledge tailored to your interests and needs within our Development Circle</p>
                               </div>
                               <div class="enhanced-d" data-enhanced-d-2>
-                                 <p>Discover a wealth of knowledge tailored to your interests and needs within our Development Circle</p>
+                                 <p>Empower your development journey with our AI-driven code assistance and review system. Our advanced tools provide real-time suggestions</p>
                               </div>
                               <div class="enhanced-d" data-enhanced-d-3>
                                  <p>Discover a wealth of knowledge tailored to your interests and needs within our Development Circle</p>
@@ -433,7 +434,7 @@
             </div>
          </div>
       </section>
-      <div class="main-sec">
+      <div class="main-sec" id="ai-solution">
          <section class="our-solution page-paddings pb-0">
             <div class="container">
                <div class="row">
@@ -1055,7 +1056,6 @@
          // Set the height of the vertical line based on the scroll position
          line.style.transform = `translateY(${scrollPercentage}%)`;
          line.style.height = `${scrollPercentage}%`;
-         console.log("scrollPercentage -> ",scrollPercentage)
          // Adjust the background position of the gradient to "fill" as you scroll
          const gradientPosition = 100 - scrollPercentage; // Move gradient upwards as you scroll
          line.style.backgroundPosition = `0 ${gradientPosition}%`;
